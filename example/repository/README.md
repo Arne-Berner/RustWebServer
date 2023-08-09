@@ -1,0 +1,5 @@
+### What is this example for?
+This example shows how we will be able to separate our business logic from the data layer and the controller. Any changes to the access layer or the datalayer will not affect the business layer.
+
+### How can we achieve this?
+The controller depends on the business layer, but the business layer does not need to know about the controller anyway. So there is no need for dependency inversion here. But the businesslayer will need to call the datalayer. To be able to make any changes to the datalayer without breaking the business layer we are using "generics" with "trait bounds". The concrete implementation of the generics will be in the root composer, so that the businesslayer does not need to know about it. The businesslayer only needs to know that it wants some repository injected into it's constructor.

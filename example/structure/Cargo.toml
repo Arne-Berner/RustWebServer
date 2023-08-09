@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+
+# workspace cant have package
+# [package]
+# name = "structure"
+# version = "0.1.0"
+# edition = "2021"
+
+=======
+>>>>>>> 91862259cf6606e1c5060a174f567f5aacf928ee
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# You can declare multiple libraries and one binary that will be executed here
+[workspace]
+members = ["binary", "library", "secondlib"]
+# badbin is not declared here, because cargo run wouldnt work anymore
+
+# Dependencies are not allowed either
+
