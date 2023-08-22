@@ -1,3 +1,0 @@
-[workspace]
-members = ["business", "controller", "repository", "rootcompose"]
-
