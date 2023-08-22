@@ -7,27 +7,27 @@ Each example has a readme file that will give you some pointers about how we imp
 Most readmes will have one or more sections describing "What is this example", "How is it implemented here" and "Why certain decisions are made".
 
 ## Books
-### Rustservers und service apps von Manning 
+### Rustservers und service apps published by Manning 
 [This book](https://livebook.manning.com/book/rust-servers-services-and-apps?origin=dashboard) has some nice ideas about errorhandling and could be a nice tutorial for anyone trying to build a webservice with both - a rust backend and a rust webassembly frontend.
 
-### rust web develeopment von Manning
+### rust web develeopment published by Manning
 [Rust web development](https://livebook.manning.com/book/rust-web-development/) on the other hand will dive a little bit deeper into the workings of a nice rust server. There are some notes about good api design, but also about different frameworks. It uses a simple framework to show you the most important parts of an API. Including integration tests and mockserver. 
 
 ## Frameworks
 ### Axum
-Axum ist ein kleiner Layer auf dem Hyper Crate, welcher für HTTP Requests zuständig ist. Es wird von den machern von Tokio maintained und hat mittlerweile mehr Downloads als Actix (trotz des jungen alters).
+Axum is a thin layer on top of the Hyper crate, which is frequently used for HTTP Requests. It is maintained by the creators of Tokio and has more downloads than Actix (despite it's young age).
 ### Warp
-Warp baut auf Hyper auf und ist das älteste Framework der drei. Es ist etwas langsamer, hat aber die "erfahrendste" Community(mit dem Framework).
+Warp also builds on top of hyper and is the oldest framework of the three frameworks discussed here. It's a bit slower but has the most "experienced" community.
 ### Actix
-Actix ist ein lightweight Rust Webframework, welches HTTP Requests, aber auch JWT authentication und ähnliches ermöglicht. So kann man mit actix schnell ein Backend Prototypen.  
-Actix benötigt immer einen HTTP Webserver, in welchem eine Actix App läuft. Diese App repräsentiert die Routes, die erreicht werden können. Unter den Routes sind jeweils handler zu finden, welche beim aufrufen der Route ausgeführt werden und einen Response erzeugen.
-### Ein Vergleich aus 2022
+Actix is a lightweight Rust Webframework with the best speed benchmarks, but roundabout the same capabilities as the two above. The downside to actix is its syntax and that it's harder to expand than axum.
+### A comparism from 2022
 https://kerkour.com/rust-web-framework-2022
 
 ## What is still missing?
 
 ### SeaORM example
-SeaORM is an async ORM that has some nice capabilities. The other big orm in rust would be diesel. But it has no dynamic queues and is synchronous.
+SeaORM is an async ORM that has some nice capabilities. The other big orm in rust would be diesel. But it has no dynamic queues and is synchronous. Since the SeaORM examples are very good by themselves, I will not add one here. It will be used in the finished repository.  
+Those are the links to the [introduction](https://www.sea-ql.org/sea-orm-tutorial/) and the [documentation](https://www.sea-ql.org/SeaORM/docs/index/).
 
 ### Trace example
 Will we use [tracing?](https://crates.io/crates/tracing)
@@ -37,7 +37,7 @@ If so, we might want to have an example using it. Tracing is relative light weig
 Benchmarking is mostly used with [Criterion](https://crates.io/crates/criterion), which [might be part of rust soon.](https://blog.rust-lang.org/inside-rust/2022/04/04/lang-roadmap-2024.html?ref=notamonadtutorial.com)
 
 ### Everything combined in this folder
-This folder will hold the actual example code with the minimum needed. It will not include real services we will use or real data for the database.
+This folder will hold the actual example code at some point with the minimum needed. It will not include real services we will use or real data for the database.
 
 ### Rustbooks
 [The OG Rustbook](https://doc.rust-lang.org/book/)
