@@ -34,7 +34,7 @@ Will we use [tracing?](https://crates.io/crates/tracing)
 If so, we might want to have an example using it. Tracing is relative light weight and easy to use. Many other frameworks and code examples use it right now. (may 2023)
 
 ### Benchmarking example
-Benchmarking is mostly used with [Criterion](https://crates.io/crates/criterion), which [might be part of rust soon.](https://blog.rust-lang.org/inside-rust/2022/04/04/lang-roadmap-2024.html?ref=notamonadtutorial.com)
+Benchmarking is mostly used with [Criterion](https://crates.io/crates/criterion), which [might be part of rust soon.](https://blog.rust-lang.org/inside-rust/2022/04/04/lang-roadmap-2024.html?ref=notamonadtutorial.com). This [Criterion example](https://github.com/bheisler/criterion.rs/blob/master/book/src/getting_started.md) might get us started.
 
 ### Everything combined in this folder
 This folder will hold the actual example code at some point with the minimum needed. It will not include real services we will use or real data for the database.
