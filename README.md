@@ -49,7 +49,7 @@ This folder will hold the actual example code at some point with the minimum nee
 [Many more](https://www.rust-lang.org/learn)
 
 
-### Fragen:
+### Questions:
 ### Is it possible to separate async tests from tokio? 
 No.
 
@@ -61,7 +61,7 @@ Yes. Altough there should be async traits coming to rust at some point, but the 
 
 ### Can we use pure DI with rust? 
 Yes. Traits can be used in a similar fashion as interfaces.
-Kann man mit Rust pure DI ausüben? Ist es also Möglich die einzelnen Services (oder in Rust Mods) Dezentral zu erstellen und so den Object Graph zentral zu halten und die (externen und internen) Dependencies über Traitobjects zu injezieren?  Antwort: Ja
+But the "typesafe" way to do this would be with generics. Using dyn traits as Trait objects is supposingly an antipattern, although it's basically the same as any use of an interface in an OOP language.
 
 ### What do we want to log?
 Logging too much can be a codesmell.
