@@ -15,7 +15,7 @@ impl<Rep> AddClinicService<Rep>
 where
     Rep: Repository<Clinic>,
 {
-    pub fn add_clinic(&self, add_clinic: AddClinic) {
+    pub fn add_clinic(&self, _add_clinic: AddClinic) {
     }
     pub fn new(repository: Rep) -> Self {
         AddClinicService { repository }

@@ -9,3 +9,6 @@ edition = "2021"
 repository = {path = "../repository"}
 controller = {path = "../controller"}
 business = {path = "../business"}
+testlibrary = {path = "../testlibrary"}
+# binaries are never allowed as dependencies
+# binary = {path = "./binary"}

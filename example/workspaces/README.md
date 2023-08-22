@@ -12,7 +12,7 @@ It will specify its members by using a cargo.toml which has no package or depend
 You can specify your dependencies in your binary cargo.toml. Dependencies need to be libraries and can be reused by a lot of other binaries. A binary cannot be a dependency.
 
 ### What are modules and submodules?
-Modules are like namespaces in other languages. They are declared within main and can only be found in the same folder as main, as an inline module in main.rs itself or in subfolders in the same folders containing a mod.rs file. Submodules are declared in the same matter in modules. Test2 shows this. 
+Modules are like namespaces in other languages. They are declared within main and can only be found in the same folder as main, as an inline module in main.rs itself or in subfolders in the same folders containing a mod.rs file. Submodules are declared in the same matter in modules. Test shows this. 
 
 ### What could be an example structure?
 We could have one root composite binary, which will use a webframework to create an entry function: main. This binary will depend on a controller, a business layer (with our business specific functions) and a datalayer (with a connection to our postgres server via seaORM). Those three dependencies will be in their own libraries, so that they can be changed and reused at will.

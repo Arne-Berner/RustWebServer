@@ -27,4 +27,9 @@ dependencies = [
  "business",
  "controller",
  "repository",
+ "testlibrary",
 ]
+
+[[package]]
+name = "testlibrary"
+version = "0.1.0"
