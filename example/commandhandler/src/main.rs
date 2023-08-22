@@ -6,8 +6,8 @@ fn main() {
    //     Err(_) => print!("It ... also kind of worked. When you want it to be an error at least."),
    // }
     // let service = RandomService{};
-    let deco_service = Decorator::new(service);
-    let mut deco_deco_service = DecoratorDecorator::new(deco_service);
+    let deco_service = Logging::new(service);
+    let mut deco_deco_service = Benchmarking::new(deco_service);
     match deco_deco_service.handle(param_obj) {
         Ok(_) => print!("It worked!"),
         Err(_) => print!("It ... also kind of worked. When you want it to be an error at least."),
@@ -79,17 +79,17 @@ impl ChangeCustomerParamObj {
     }
 }
 
-pub struct Decorator<Service> {
+pub struct Logging<Service> {
     service: Service,
 }
 
-impl<Service> Decorator<Service> {
+impl<Service> Logging<Service> {
     pub fn new(service: Service) -> Self {
-        Decorator { service }
+        Logging { service }
     }
 }
 
-impl<Service> CommandHandler for Decorator<Service>
+impl<Service> CommandHandler for Logging<Service>
 where
     Service: CommandHandler,
     Service::ParamObject: std::fmt::Debug,
@@ -108,17 +108,17 @@ where
     }
 }
 
-pub struct DecoratorDecorator<Service> {
+pub struct Benchmarking<Service> {
     service: Service,
 }
 
-impl<Service> DecoratorDecorator<Service> {
+impl<Service> Benchmarking<Service> {
     pub fn new(service: Service) -> Self {
-        DecoratorDecorator { service }
+        Benchmarking { service }
     }
 }
 
-impl<Service> CommandHandler for DecoratorDecorator<Service>
+impl<Service> CommandHandler for Benchmarking<Service>
 where
     Service: CommandHandler,
 {
