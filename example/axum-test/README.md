@@ -97,9 +97,6 @@ async fn create_user(payload: Result<Json<Value>, JsonRejection>) {
     }
 }
 ```
-#### Errormessages
-Also we need to work on our own Errormessages and discuss, what we will want to use for our errorhandling. Do we want to write our own Errorlogik or do we want to use [axums errorlogik](https://docs.rs/axum/latest/axum/error_handling/index.html)?  
-
 #### Multiple Services/State
 Since we do not want to provide all the services for all routes, we could make a store, that holds all the appropriate functions or we could provide each route with a service via closures like so (taken from [here](https://docs.rs/axum/latest/axum/index.html#sharing-state-with-handlers)):
 ```rust
@@ -140,9 +137,6 @@ struct CreateUserPayload {
 ```
 #### Statuscode
 Will we build a wrapper for the axum [Statuscode](https://docs.rs/http/0.2.9/http/status/index.html)?
-
-#### Middleware
-Will we use Tower for already build middleware or will we write our own middleware?
 
 ### Problems:
 Will we get deadlocks with the [tokio mutex?](https://docs.rs/tokio/latest/tokio/sync/struct.Mutex.html) and how could we use RwLock instead for read and writes?
