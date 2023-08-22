@@ -35,4 +35,6 @@ or by setting the rust-toolchain.toml as seen in this project.
 
 ### nightly vs async traits
 Should we use nightly or async traits? Async traits are supposed to be ready but they use pin box, which is a runtime feature, while the nightly version uses impl Future. Nightly sounds better, but has some security implications due to using nightly.
-The problem with nightly is, that it does not work well with generic traits and send. So it is not threadsafe for generic types, when you use dependency injection. It is best explained in [this issue](https://github.com/rust-lang/rust/issues/103854)
+The problem with nightly is, that it does not work well with generic traits and send. So it is not possible to send it over threads for generic types, when you use dependency injection. But this is done extensively in Tokio (and other frameworks) to enable load balancing for async routines. It is best explained in [this issue](https://github.com/rust-lang/rust/issues/103854). 
+#### Update
+There are some news on this issue which are explained [here](https://blog.rust-lang.org/inside-rust/2023/05/03/stabilizing-async-fn-in-trait.html). MVP Part 2 shows a workaround in [this playground](https://play.rust-lang.org/?version=nightly&mode=debug&edition=2021&gist=2066934a05cb9eafc0b47af7bdf8c57f). 
