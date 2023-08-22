@@ -4,12 +4,6 @@ Even though the name might suggest it, it is not the Command pattern. The name s
 ### What is it's structure?
 The Commandhandler is a trait, that takes in a generic "parameter object" as it's argument and uses the Result type (in this rust implementation) as a return type. Even though I say generic, what I mean is it has an associated type, that will differ from each struct implementing this trait. The response is - once again - a generic result<T, Error> and could be an ID, a Statuscode 200 or anything similar. The error will be a custom error, which will be implemented like in [this blogpost](https://fettblog.eu/rust-enums-wrapping-errors/).
 
-### What is Commandhandler
-Even though the name might suggest it, it is not the Command pattern. The name stems from the CQRS (Command Query Responsibility Segregation pattern). The idea behind the Commandhandler trait is that it will be an abstraction for any command that might be executed. The "Tower" crate with it's service resembles this structure much more.
-
-### What is it's structure?
-The Commandhandler is a trait, that takes in a generic "parameter object" as it's argument and uses the Result type (in this rust implementation) as a return type. Even though I say generic, what I mean is it has an associated type, that will differ from each struct implementing this trait. The response is - once again - a generic result<T, Error> and could be an ID, a Statuscode 200 or anything similar. The error will be a custom error, which will be implemented like in [this blogpost](https://fettblog.eu/rust-enums-wrapping-errors/).
-
 ### Why a paramter Object?
 Using a parameter object we do not need to worry about the amount of parameters a function takes. But it also ensures that only services that can use that parameter object will call this function, because at the time the generics get their concrete type, the compiler will show you an error message, if the composition went wrong.
 
