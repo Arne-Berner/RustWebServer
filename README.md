@@ -40,13 +40,13 @@ Benchmarking is mostly used with [Criterion](https://crates.io/crates/criterion)
 This folder will hold the actual example code at some point with the minimum needed. It will not include real services we will use or real data for the database.
 
 ### Rustbooks
-[The OG Rustbook](https://doc.rust-lang.org/book/)
-[Rust by Example](https://doc.rust-lang.org/rust-by-example/)
-[Rustonomicon](https://doc.rust-lang.org/nomicon/)
-[Cargobook](https://doc.rust-lang.org/cargo/)
-[Performance Benchmarking](https://nnethercote.github.io/perf-book/benchmarking.html)
-[Clippy book](https://doc.rust-lang.org/nightly/clippy/index.html)
-[Many more](https://www.rust-lang.org/learn)
+[The OG Rustbook](https://doc.rust-lang.org/book/)  
+[Rust by Example](https://doc.rust-lang.org/rust-by-example/)  
+[Rustonomicon](https://doc.rust-lang.org/nomicon/)  
+[Cargobook](https://doc.rust-lang.org/cargo/)  
+[Performance Benchmarking](https://nnethercote.github.io/perf-book/benchmarking.html)  
+[Clippy book](https://doc.rust-lang.org/nightly/clippy/index.html)  
+[Many more](https://www.rust-lang.org/learn)  
 
 
 ### Questions:
