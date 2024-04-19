@@ -1,0 +1,8 @@
+[package]
+name = "entities"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sea-orm = { version = "0.12.15", features = ["macros", "debug-print", "runtime-tokio-native-tls", "sqlx-mysql"] }
+

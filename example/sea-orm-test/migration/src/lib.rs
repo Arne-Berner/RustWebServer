@@ -1,0 +1,21 @@
+// migration/src/lib.rs
+
+pub use sea_orm_migration::prelude::*;
+
+// Add each migration file as a module
+mod m20220101_000001_create_bakery_table;
+mod m20220101_000002_create_chef_table;
+mod m20240405_070741_drop_cake_table;
+
+pub struct Migrator;
+
+#[async_trait::async_trait]
+impl MigratorTrait for Migrator {
+    fn migrations() -> Vec<Box<dyn MigrationTrait>> {
+        vec![
+            Box::new(m20220101_000001_create_bakery_table::Migration),
+            Box::new(m20220101_000002_create_chef_table::Migration),
+            Box::new(m20240405_070741_drop_cake_table::Migration),
+        ]
+    }
+}

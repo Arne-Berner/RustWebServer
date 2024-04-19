@@ -1,0 +1,7 @@
+[package]
+name = "repository"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sea-orm = { version = "^0.12.0", features = ["sqlx-mysql", "runtime-async-std-native-tls", "macros", "debug-print", "runtime-tokio-native-tls", "sqlx"] }

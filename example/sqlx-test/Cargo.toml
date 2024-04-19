@@ -1,0 +1,25 @@
+[package]
+name = "sqlx"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.37.0", features = ["full"] }
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4.22", default-features = false, features = ["clock"] }
+
+[dependencies.sqlx]
+version = "0.7"
+default-features = false
+features = [
+"runtime-tokio-rustls",
+# access to sqlx::query! and sqlx::query_as!
+"macros",
+"postgres",
+# support for the uuid crate
+"uuid",
+# sql timestampz to DateTime<T>
+"chrono",
+# same functionality as sql-cli
+"migrate"
+]
